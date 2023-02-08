@@ -7750,6 +7750,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 5
   JumpForce: 10
+  isJumping: 0
+  doubleJump: 0
 --- !u!1 &1662250747
 GameObject:
   m_ObjectHideFlags: 0
@@ -8815,7 +8817,7 @@ GameObject:
   - component: {fileID: 2098361374}
   - component: {fileID: 2098361373}
   - component: {fileID: 2098361375}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
