@@ -33,12 +33,12 @@ public class Player : MonoBehaviour
         if (Input.GetAxis("Horizontal") > 0f)
         {
             anim.SetBool("walk", true);
-            transform.eulerAngles = new Vector3(0f,0f,0f);
+            transform.eulerAngles = new Vector3(0f, 0f, 0f);
         }
         if (Input.GetAxis("Horizontal") < 0f)
         {
             anim.SetBool("walk", true);
-            transform.eulerAngles = new Vector3(0f,180f,0f);
+            transform.eulerAngles = new Vector3(0f, 180f, 0f);
         }
         if (Input.GetAxis("Horizontal") == 0f)
         {
@@ -74,6 +74,11 @@ public class Player : MonoBehaviour
         {
             isJumping = false;
             anim.SetBool("jump", false);
+        }
+        if (collision.gameObject.tag == "Spike")
+        {
+            GameController.instance.ShowGameOver();
+            Destroy(gameObject);
         }
     }
     void OnCollisionExit2D(Collision2D collision)
